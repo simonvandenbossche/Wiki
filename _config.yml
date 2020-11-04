@@ -1,0 +1,7 @@
+title: Wiki
+logo: images/logo.png
+execute:
+  execute_notebooks: off
+  
+parse:
+  myst_extended_syntax: true
