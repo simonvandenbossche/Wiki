@@ -5,3 +5,6 @@ execute:
   
 parse:
   myst_extended_syntax: true
+
+repository:
+    url: https://github.com/simonvandenbossche/wiki

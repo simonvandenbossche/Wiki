@@ -1,4 +1,7 @@
 - file: landing-page
-- file: content/raspberrypi/python
-- file: content/raspberrypi/setup
-- file: content/raspberrypi/ssh
+- part: Raspberry pi
+  chapters:
+  - file: content/raspberrypi/python
+  - file: content/raspberrypi/setup
+  - file: content/raspberrypi/ssh
+  - file: content/raspberrypi/syntax_wpa_supplicant
