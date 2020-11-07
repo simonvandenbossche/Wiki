@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Python &#8212; Wiki</title>
+    <title>Bash scripts &#8212; Wiki</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -54,8 +54,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Setup" href="setup.html" />
-    <link rel="prev" title="Intro" href="../intro.html" />
+    <link rel="prev" title="Syntax wpa_supplicant.conf" href="syntax_wpa_supplicant.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -101,8 +100,8 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="python.html">
    Python
   </a>
  </li>
@@ -121,8 +120,8 @@
    Syntax wpa_supplicant.conf
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bash_scripts.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Bash scripts
   </a>
  </li>
@@ -168,7 +167,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/raspberrypi/python.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/raspberrypi/bash_scripts.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -199,20 +198,18 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#berryconda">
-   BerryConda
+  <a class="reference internal nav-link" href="#creation">
+   Creation
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#install">
-     Install
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#miniconda">
-   Miniconda
+  <a class="reference internal nav-link" href="#usage">
+   Usage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alias">
+   Alias
   </a>
  </li>
 </ul>
@@ -226,88 +223,78 @@
         
               <div>
                 
-  <div class="section" id="python">
-<h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="berryconda">
-<h2>BerryConda<a class="headerlink" href="#berryconda" title="Permalink to this headline">¶</a></h2>
-<p>Berryconda is a conda based Python distribution for the Raspberry Pi.
-Altough you can only use version up to python 3.6.6 (november 2020), you have the advantage of an easy installation process with the conda infrastructure.</p>
-<div class="section" id="install">
-<h3>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h3>
-<p>Sources: <a class="reference external" href="https://github.com/jjhelmus/berryconda">berryconda</a>, <a class="reference external" href="https://stackoverflow.com/questions/39371772/how-to-install-anaconda-on-raspberry-pi-3-model-b">environment</a></p>
+  <div class="section" id="bash-scripts">
+<h1>Bash scripts<a class="headerlink" href="#bash-scripts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="creation">
+<h2>Creation<a class="headerlink" href="#creation" title="Permalink to this headline">¶</a></h2>
+<p>sources: <a class="reference external" href="http://linuxcommand.org/lc3_wss0010.php">http://linuxcommand.org/lc3_wss0010.php</a></p>
 <ol>
-<li><p>Download correct version (BerryConda will be installed in the folder where you run one of the following commands):</p>
+<li><p>create script file with nano file editor</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano FILEPATH.sh
+</pre></div>
+</div>
+</li>
+<li><p>begin the script with <code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code></p></li>
+<li><p>add the terminal commands line by line</p></li>
+</ol>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>sources: <a class="reference external" href="https://www.geeksforgeeks.org/source-command-in-linux-with-examples/">https://www.geeksforgeeks.org/source-command-in-linux-with-examples/</a>
+<a class="reference external" href="http://linuxcommand.org/lc3_wss0010.php">http://linuxcommand.org/lc3_wss0010.php</a></p>
 <ul>
-<li><p>Raspberry Pi Zero or 1</p>
-<ul>
-<li><p>Python 2</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda2-2.0.0-Linux-armv6l.sh
+<li><p>execute code in the current terminal</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> FILEPATH.sh
 </pre></div>
 </div>
 </li>
-<li><p>Python 3</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda3-2.0.0-Linux-armv6l.sh
-</pre></div>
-</div>
-</li>
-</ul>
-</li>
-<li><p>Raspberry Pi 2 or 3</p>
-<ul>
-<li><p>Python 2</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda2-2.0.0-Linux-armv7l.sh
-</pre></div>
-</div>
-</li>
-<li><p>Python 3</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda3-2.0.0-Linux-armv7l.sh
-</pre></div>
-</div>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Make the file executable and install it</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod +x Berryconda3-2.0.0-Linux-armv7l.sh
-./Berryconda3-2.0.0-Linux-armv7l.sh
-</pre></div>
-</div>
-</li>
-<li><p>Add conda command to pi <code>export PATH=”/home/pi/berryconda3/bin”</code></p></li>
-<li><p>Install new version of python</p>
+<li><p>execute code in new terminal</p>
 <ol>
-<li><p>Install new version (Can be any available version, I used 3.6 as example)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels rpi
-conda install <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.6
+<li><p>make file executable (first time only)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod <span class="m">755</span> FILEPATH.sh
 </pre></div>
 </div>
 </li>
-<li><p>Create environment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name py36 <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.6
-</pre></div>
-</div>
-</li>
-<li><p>Activation/decativation</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> activate py36
-<span class="nb">source</span> deactivate
+<li><p>execute code</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. FILEPATH.sh
 </pre></div>
 </div>
 </li>
 </ol>
 </li>
-<li><p>Install RPi.GPIO (optional, in activated environment)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install rpi.gpio
+</ul>
+</div>
+<div class="section" id="alias">
+<h2>Alias<a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h2>
+<p>You can create a custom command for your bash script with an alias.</p>
+<p>sources: <a class="reference external" href="https://www.tecmint.com/create-alias-in-linux/">https://www.tecmint.com/create-alias-in-linux/</a></p>
+<ul>
+<li><p>create a temporary alias (usable until you close your terminal)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">SHORTCOMMAND</span><span class="o">=</span><span class="s2">&quot;FULLCOMMAND&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>create a permanent alias</p>
+<ol>
+<li><p>open the bashrc file</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano ~/bashrc
+</pre></div>
+</div>
+</li>
+<li><p>append at the end of the file the alias command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">SHORTCOMMAND</span><span class="o">=</span><span class="s2">&quot;FULLCOMMAND&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>save and close the file with <code class="docutils literal notranslate"><span class="pre">CTRL+X</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Y</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">ENTER</span></code></p></li>
+<li><p>reboot</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo reboot
 </pre></div>
 </div>
 </li>
 </ol>
-</div>
-</div>
-<div class="section" id="miniconda">
-<h2>Miniconda<a class="headerlink" href="#miniconda" title="Permalink to this headline">¶</a></h2>
-<p>sources <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a></p>
-<p>A second option is miniconda, a minimal version of anaconda. But I couldn’t get this to work on the pi.</p>
+</li>
+</ul>
 </div>
 </div>
 
@@ -339,8 +326,7 @@ conda install <span class="nv">python</span><span class="o">=</span><span class=
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Intro</a>
-    <a class='right-next' id="next-link" href="setup.html" title="next page">Setup</a>
+    <a class='left-prev' id="prev-link" href="syntax_wpa_supplicant.html" title="previous page">Syntax wpa_supplicant.conf</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
