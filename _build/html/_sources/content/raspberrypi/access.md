@@ -21,7 +21,6 @@ VNC is a network protocol which allows you to remotely control the desktop scree
     - navigate to `Interfacing options`
     - select `vnc` → `Yes`
 
-(ssh)=
 ## SSH
 
 SSH stand for secure shell and is a network protocol for a command-line interface to your desired device.
@@ -38,6 +37,7 @@ SSH stand for secure shell and is a network protocol for a command-line interfac
       4. Configure connection
 	  ![ipv4properties](ipv4properties.png)
 
+(preconfigure ssh)=
 ### Preconfigure
 
 1. Add file `ssh` to the boot folder (no extension, no contents).
