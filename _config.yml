@@ -1,10 +1,13 @@
 title: Wiki
 logo: images/logo.png
 execute:
-  execute_notebooks: off
+    execute_notebooks: off
   
 parse:
-  myst_extended_syntax: true
+    myst_extended_syntax: true
 
 repository:
     url: https://github.com/simonvandenbossche/wiki
+
+html:
+    use_repository_button: true

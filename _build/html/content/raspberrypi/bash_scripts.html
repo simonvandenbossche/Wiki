@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Syntax wpa_supplicant.conf &#8212; Wiki</title>
+    <title>Bash scripts &#8212; Wiki</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -54,8 +54,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Bash scripts" href="bash_scripts.html" />
-    <link rel="prev" title="Access" href="access.html" />
+    <link rel="next" title="Pinout" href="pinout.html" />
+    <link rel="prev" title="Syntax wpa_supplicant.conf" href="syntax_wpa_supplicant.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -129,12 +129,12 @@
   </a>
  </li>
  <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="syntax_wpa_supplicant.html">
    Syntax wpa_supplicant.conf
   </a>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="bash_scripts.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Bash scripts
     </a>
    </li>
@@ -187,7 +187,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/raspberrypi/syntax_wpa_supplicant.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/raspberrypi/bash_scripts.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -225,6 +225,30 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creation">
+   Creation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage">
+   Usage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alias">
+   Alias
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -232,10 +256,78 @@
         
               <div>
                 
-  <div class="section" id="syntax-wpa-supplicant-conf">
-<h1>Syntax wpa_supplicant.conf<a class="headerlink" href="#syntax-wpa-supplicant-conf" title="Permalink to this headline">¶</a></h1>
-<p>Wifi configuration file on the raspberry pi. path: <code class="docutils literal notranslate"><span class="pre">/etc/wpa_supplicant/wpa_supplicant.conf</span></code></p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="bash-scripts">
+<h1>Bash scripts<a class="headerlink" href="#bash-scripts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="creation">
+<h2>Creation<a class="headerlink" href="#creation" title="Permalink to this headline">¶</a></h2>
+<p>sources: <a class="reference external" href="http://linuxcommand.org/lc3_wss0010.php">http://linuxcommand.org/lc3_wss0010.php</a></p>
+<ol>
+<li><p>create script file with nano file editor</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano FILEPATH.sh
+</pre></div>
+</div>
+</li>
+<li><p>begin the script with <code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code></p></li>
+<li><p>add the terminal commands line by line</p></li>
+</ol>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>sources: <a class="reference external" href="https://www.geeksforgeeks.org/source-command-in-linux-with-examples/">https://www.geeksforgeeks.org/source-command-in-linux-with-examples/</a>
+<a class="reference external" href="http://linuxcommand.org/lc3_wss0010.php">http://linuxcommand.org/lc3_wss0010.php</a></p>
+<ul>
+<li><p>execute code in the current terminal</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> FILEPATH.sh
+</pre></div>
+</div>
+</li>
+<li><p>execute code in new terminal</p>
+<ol>
+<li><p>make file executable (first time only)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod <span class="m">755</span> FILEPATH.sh
+</pre></div>
+</div>
+</li>
+<li><p>execute code</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>. FILEPATH.sh
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="section" id="alias">
+<h2>Alias<a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h2>
+<p>You can create a custom command for your bash script with an alias.</p>
+<p>sources: <a class="reference external" href="https://www.tecmint.com/create-alias-in-linux/">https://www.tecmint.com/create-alias-in-linux/</a></p>
+<ul>
+<li><p>create a temporary alias (usable until you close your terminal)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">SHORTCOMMAND</span><span class="o">=</span><span class="s2">&quot;FULLCOMMAND&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>create a permanent alias</p>
+<ol>
+<li><p>open the bashrc file</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano ~/bashrc
+</pre></div>
+</div>
+</li>
+<li><p>append at the end of the file the alias command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">SHORTCOMMAND</span><span class="o">=</span><span class="s2">&quot;FULLCOMMAND&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>save and close the file with <code class="docutils literal notranslate"><span class="pre">CTRL+X</span></code> → <code class="docutils literal notranslate"><span class="pre">Y</span></code> → <code class="docutils literal notranslate"><span class="pre">ENTER</span></code></p></li>
+<li><p>reboot</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo reboot
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+</ul>
 </div>
 </div>
 
@@ -267,8 +359,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="access.html" title="previous page">Access</a>
-    <a class='right-next' id="next-link" href="bash_scripts.html" title="next page">Bash scripts</a>
+    <a class='left-prev' id="prev-link" href="syntax_wpa_supplicant.html" title="previous page">Syntax wpa_supplicant.conf</a>
+    <a class='right-next' id="next-link" href="pinout.html" title="next page">Pinout</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

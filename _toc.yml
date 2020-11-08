@@ -1,7 +1,14 @@
-- file: landing-page
+- file: content/intro
+- part: General
+  chapters:
+    - file: content/playground
+
 - part: Raspberry pi
   chapters:
-  - file: content/raspberrypi/python
-  - file: content/raspberrypi/setup
-  - file: content/raspberrypi/ssh
-  - file: content/raspberrypi/syntax_wpa_supplicant
+    - file: content/raspberrypi/setup
+    - file: content/raspberrypi/python
+    - file: content/raspberrypi/access
+    - file: content/raspberrypi/syntax_wpa_supplicant
+      sections:
+        - file: content/raspberrypi/bash_scripts
+    - file: content/raspberrypi/pinout

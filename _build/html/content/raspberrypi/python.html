@@ -55,7 +55,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Setup" href="setup.html" />
-    <link rel="prev" title="My book title" href="../../landing-page.html" />
+    <link rel="prev" title="Playground" href="../playground.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -90,8 +90,20 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../landing-page.html">
-   My book title
+  <a class="reference internal" href="../intro.html">
+   Intro
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  General
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../playground.html">
+   Playground
   </a>
  </li>
 </ul>
@@ -112,13 +124,18 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ssh.html">
-   SSH
+  <a class="reference internal" href="access.html">
+   Access
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="syntax_wpa_supplicant.html">
    Syntax wpa_supplicant.conf
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pinout.html">
+   Pinout
   </a>
  </li>
 </ul>
@@ -173,6 +190,19 @@
     
 </div>
         <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/simonvandenbossche/wiki"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
 
 
         <!-- Full screen (wrap in <a> to have style consistency -->
@@ -269,7 +299,12 @@ Altough you can only use version up to python 3.6.6 (november 2020), you have th
 </pre></div>
 </div>
 </li>
-<li><p>Add conda command to pi <code>export PATH=”/home/pi/berryconda3/bin”</code></p></li>
+<li><p>Add conda command to pi <code>export PATH=”/home/pi/berryconda3/bin”</code></p>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>This step is wrong. Please do not follow it.</p>
+</div>
+</li>
 <li><p>Install new version of python</p>
 <ol>
 <li><p>Install new version (Can be any available version, I used 3.6 as example)</p>
@@ -334,7 +369,7 @@ conda install <span class="nv">python</span><span class="o">=</span><span class=
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../../landing-page.html" title="previous page">My book title</a>
+    <a class='left-prev' id="prev-link" href="../playground.html" title="previous page">Playground</a>
     <a class='right-next' id="next-link" href="setup.html" title="next page">Setup</a>
 
     </div>

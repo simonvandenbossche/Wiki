@@ -32,6 +32,9 @@ Sources: [berryconda](https://github.com/jjhelmus/berryconda), [environment](htt
     ./Berryconda3-2.0.0-Linux-armv7l.sh
     ```
 3. Add conda command to pi <code>export PATH="/home/pi/berryconda3/bin"</code>
+    ```{error}
+    This step is wrong. Please do not follow it.
+    ```
 4. Install new version of python
     1. Install new version (Can be any available version, I used 3.6 as example)
         ```bash
