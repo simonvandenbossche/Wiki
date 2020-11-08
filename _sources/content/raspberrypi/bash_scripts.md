@@ -49,7 +49,7 @@ sources: <https://www.tecmint.com/create-alias-in-linux/>
         ```bash
         alias SHORTCOMMAND="FULLCOMMAND"
         ```
-    3. save and close the file with `CTRL+X` -> `Y` -> `ENTER`
+    3. save and close the file with `CTRL+X` → `Y` → `ENTER`
     4. reboot
         ```bash
         sudo reboot

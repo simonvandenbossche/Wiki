@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Python &#8212; Wiki</title>
+    <title>Access &#8212; Wiki</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -54,8 +54,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Setup" href="setup.html" />
-    <link rel="prev" title="Playground" href="../playground.html" />
+    <link rel="next" title="Syntax wpa_supplicant.conf" href="syntax_wpa_supplicant.html" />
+    <link rel="prev" title="Setup" href="setup.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -113,8 +113,8 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="python.html">
    Python
   </a>
  </li>
@@ -123,8 +123,8 @@
    Setup
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="access.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Access
   </a>
  </li>
@@ -180,7 +180,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/raspberrypi/python.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/raspberrypi/access.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -224,21 +224,48 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#berryconda">
-   BerryConda
+  <a class="reference internal nav-link" href="#screen-keyboard-mouse">
+   Screen, keyboard, mouse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vnc">
+   VNC
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#install">
-     Install
+    <a class="reference internal nav-link" href="#configure">
+     Configure
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#miniconda">
-   Miniconda
+  <a class="reference internal nav-link" href="#ssh">
+   SSH
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#internet">
+     Internet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preconfigure">
+     Preconfigure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Configure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usage">
+     Usage
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -251,93 +278,85 @@
         
               <div>
                 
-  <div class="section" id="python">
-<h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="berryconda">
-<h2>BerryConda<a class="headerlink" href="#berryconda" title="Permalink to this headline">¶</a></h2>
-<p>Berryconda is a conda based Python distribution for the Raspberry Pi.
-Altough you can only use version up to python 3.6.6 (november 2020), you have the advantage of an easy installation process with the conda infrastructure.</p>
-<div class="section" id="install">
-<h3>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h3>
-<p>Sources: <a class="reference external" href="https://github.com/jjhelmus/berryconda">berryconda</a>, <a class="reference external" href="https://stackoverflow.com/questions/39371772/how-to-install-anaconda-on-raspberry-pi-3-model-b">environment</a></p>
+  <div class="section" id="access">
+<h1>Access<a class="headerlink" href="#access" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="screen-keyboard-mouse">
+<h2>Screen, keyboard, mouse<a class="headerlink" href="#screen-keyboard-mouse" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="vnc">
+<h2>VNC<a class="headerlink" href="#vnc" title="Permalink to this headline">¶</a></h2>
+<p>VNC is a network protocol which allows you to remotely control the desktop screen of your device.</p>
+<div class="section" id="configure">
+<h3>Configure<a class="headerlink" href="#configure" title="Permalink to this headline">¶</a></h3>
 <ol>
-<li><p>Download correct version (BerryConda will be installed in the folder where you run one of the following commands):</p>
+<li><p>install vnc-server and vnc-viewer</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install realvnc-vnc-server realvnc-vnc-viewer
+</pre></div>
+</div>
+</li>
+<li><p>enable vnc</p>
 <ul>
-<li><p>Raspberry Pi Zero or 1</p>
-<ul>
-<li><p>Python 2</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda2-2.0.0-Linux-armv6l.sh
+<li><p>Open raspberry configuration</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo raspi-config
 </pre></div>
 </div>
 </li>
-<li><p>Python 3</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda3-2.0.0-Linux-armv6l.sh
-</pre></div>
-</div>
-</li>
+<li><p>navigate to <code class="docutils literal notranslate"><span class="pre">Interfacing</span> <span class="pre">options</span></code></p></li>
+<li><p>select <code class="docutils literal notranslate"><span class="pre">vnc</span></code> → <code class="docutils literal notranslate"><span class="pre">Yes</span></code></p></li>
 </ul>
-</li>
-<li><p>Raspberry Pi 2 or 3</p>
-<ul>
-<li><p>Python 2</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda2-2.0.0-Linux-armv7l.sh
-</pre></div>
-</div>
-</li>
-<li><p>Python 3</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda3-2.0.0-Linux-armv7l.sh
-</pre></div>
-</div>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Make the file executable and install it</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod +x Berryconda3-2.0.0-Linux-armv7l.sh
-./Berryconda3-2.0.0-Linux-armv7l.sh
-</pre></div>
-</div>
-</li>
-<li><p>Add conda command to pi <code>export PATH=”/home/pi/berryconda3/bin”</code></p>
-<div class="admonition error">
-<p class="admonition-title">Error</p>
-<p>This step is wrong. Please do not follow it.</p>
-</div>
-</li>
-<li><p>Install new version of python</p>
-<ol>
-<li><p>Install new version (Can be any available version, I used 3.6 as example)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels rpi
-conda install <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.6
-</pre></div>
-</div>
-</li>
-<li><p>Create environment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name py36 <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.6
-</pre></div>
-</div>
-</li>
-<li><p>Activation/decativation</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> activate py36
-<span class="nb">source</span> deactivate
-</pre></div>
-</div>
-</li>
-</ol>
-</li>
-<li><p>Install RPi.GPIO (optional, in activated environment)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install rpi.gpio
-</pre></div>
-</div>
 </li>
 </ol>
 </div>
 </div>
-<div class="section" id="miniconda">
-<h2>Miniconda<a class="headerlink" href="#miniconda" title="Permalink to this headline">¶</a></h2>
-<p>sources <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a></p>
-<p>A second option is miniconda, a minimal version of anaconda. But I couldn’t get this to work on the pi.</p>
+<div class="section" id="ssh">
+<span id="id1"></span><h2>SSH<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h2>
+<p>SSH stand for secure shell and is a network protocol for a command-line interface to your desired device.</p>
+<div class="section" id="internet">
+<h3>Internet<a class="headerlink" href="#internet" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>WIFI setup: add file <code class="docutils literal notranslate"><span class="pre">wpa_supplicant.conf</span></code> to the boot folder or <code class="docutils literal notranslate"><span class="pre">/etc/wpa_supplicant/wpa_supplicant.conf</span></code> on the pi <span class="xref myst">syntax</span></p></li>
+<li><p>Direct ethernet connection:</p>
+<ol class="simple">
+<li><p>add <code class="docutils literal notranslate"><span class="pre">ip=10.0.0.1</span></code> to the long line of <code class="docutils literal notranslate"><span class="pre">cmdline.txt</span></code> of the boot folder or <code class="docutils literal notranslate"><span class="pre">/boot/cmdline.txt</span></code> on the pi</p></li>
+<li><p>Set IP of PC
+1. Navigate on your Windows 10 to <br>
+<code class="docutils literal notranslate"><span class="pre">Control</span> <span class="pre">Panel</span></code> → <code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">and</span> <span class="pre">Internet</span></code> → <code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">and</span> <span class="pre">Sharing</span> <span class="pre">Center</span></code> → <code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">adapter</span> <span class="pre">settings</span></code>
+2. Right-click <code class="docutils literal notranslate"><span class="pre">Ethernet</span></code> and select <code class="docutils literal notranslate"><span class="pre">Properties</span></code>
+3. Double-click <code class="docutils literal notranslate"><span class="pre">Internet</span> <span class="pre">Protocol</span> <span class="pre">versie</span> <span class="pre">4</span> <span class="pre">(TCP/IPv4)</span></code>
+4. Configure connection
+<img alt="ipv4properties" src="../../_images/ipv4properties.png" /></p></li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="section" id="preconfigure">
+<h3>Preconfigure<a class="headerlink" href="#preconfigure" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Add file <code class="docutils literal notranslate"><span class="pre">ssh</span></code> to the boot folder (no extension, no contents).</p></li>
+<li><p>WIFI setup: add file <code class="docutils literal notranslate"><span class="pre">wpa_supplicant.conf</span></code> to the boot folder <span class="xref myst">syntax</span></p></li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h3>Configure<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Enable SSH <br></p>
+<ol>
+<li><p>Open raspberry configuration</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo raspi-config
+</pre></div>
+</div>
+</li>
+<li><p>Navigate to <strong>Interfacing options</strong></p></li>
+<li><p>Select SSH → Yes</p></li>
+</ol>
+</div>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>On another computer, type in command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh pi@IP_ADDRESS
+</pre></div>
+</div>
+<p>The pi will ask for a password, the default is <code class="docutils literal notranslate"><span class="pre">raspberry</span></code>.</p>
+</div>
 </div>
 </div>
 
@@ -369,8 +388,8 @@ conda install <span class="nv">python</span><span class="o">=</span><span class=
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../playground.html" title="previous page">Playground</a>
-    <a class='right-next' id="next-link" href="setup.html" title="next page">Setup</a>
+    <a class='left-prev' id="prev-link" href="setup.html" title="previous page">Setup</a>
+    <a class='right-next' id="next-link" href="syntax_wpa_supplicant.html" title="next page">Syntax wpa_supplicant.conf</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
