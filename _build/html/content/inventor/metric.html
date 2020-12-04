@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Pinout &#8212; Wiki</title>
+    <title>Metric Autodesk Inventor &#8212; Wiki</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -54,8 +54,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="PyCharm" href="../pycharm/pycharm.html" />
-    <link rel="prev" title="Bash scripts" href="bash_scripts.html" />
+    <link rel="prev" title="PyCharm" href="../pycharm/pycharm.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -112,34 +111,34 @@
   Raspberry pi
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="setup.html">
+  <a class="reference internal" href="../raspberrypi/setup.html">
    Setup
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="python.html">
+  <a class="reference internal" href="../raspberrypi/python.html">
    Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="access.html">
+  <a class="reference internal" href="../raspberrypi/access.html">
    Access
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="syntax_wpa_supplicant.html">
+  <a class="reference internal" href="../raspberrypi/syntax_wpa_supplicant.html">
    Syntax wpa_supplicant.conf
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="bash_scripts.html">
+  <a class="reference internal" href="../raspberrypi/bash_scripts.html">
    Bash scripts
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../raspberrypi/pinout.html">
    Pinout
   </a>
  </li>
@@ -161,9 +160,9 @@
   Inventor
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../inventor/metric.html">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Metric Autodesk Inventor
   </a>
  </li>
@@ -209,7 +208,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/raspberrypi/pinout.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/inventor/metric.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -247,6 +246,20 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#order-thread-unit">
+   Order thread unit
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -254,12 +267,22 @@
         
               <div>
                 
-  <div class="section" id="pinout">
-<h1>Pinout<a class="headerlink" href="#pinout" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Raspberry pi 3B</p></li>
-</ul>
-<p><img alt="pinout3b" src="../../_images/pinout.png" /></p>
+  <div class="section" id="metric-autodesk-inventor">
+<h1>Metric Autodesk Inventor<a class="headerlink" href="#metric-autodesk-inventor" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="order-thread-unit">
+<h2>Order thread unit<a class="headerlink" href="#order-thread-unit" title="Permalink to this headline">¶</a></h2>
+<p>Set the order and the default thread mesurement unit.</p>
+<ol class="simple">
+<li><p>Problem
+<img alt="problem" src="../../_images/ClearanceHoleProblem.png" />
+Fix order of unit of the thread. (I set “ISO” as my new default.)</p></li>
+<li><p>Navigate to the data file
+Open “C:\Users\Public\Documents\Autodesk\Inventor 2019\Design Data\XLS\en-US\clearance.xls”</p></li>
+<li><p>Make a backup copy of this file</p></li>
+<li><p>Change the order by changing the number in cell “B1”. Make sure the numbers begin with 1 and are consecutive and do no repeat.
+In my case I swapped 2 numbers.</p></li>
+</ol>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -275,7 +298,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content\raspberrypi"
+            path: "./content\inventor"
         },
         predefinedOutput: true
     }
@@ -290,8 +313,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="bash_scripts.html" title="previous page">Bash scripts</a>
-    <a class='right-next' id="next-link" href="../pycharm/pycharm.html" title="next page">PyCharm</a>
+    <a class='left-prev' id="prev-link" href="../pycharm/pycharm.html" title="previous page">PyCharm</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

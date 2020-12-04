@@ -134,8 +134,37 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="bash_scripts.html">
+   Bash scripts
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="pinout.html">
    Pinout
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  PyCharm
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pycharm/pycharm.html">
+   PyCharm
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Inventor
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../inventor/metric.html">
+   Metric Autodesk Inventor
   </a>
  </li>
 </ul>
@@ -238,6 +267,11 @@
      Configure
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usage">
+     Usage
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -261,7 +295,7 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#usage">
+    <a class="reference internal nav-link" href="#id2">
      Usage
     </a>
    </li>
@@ -282,7 +316,13 @@
 <h1>Access<a class="headerlink" href="#access" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="screen-keyboard-mouse">
 <h2>Screen, keyboard, mouse<a class="headerlink" href="#screen-keyboard-mouse" title="Permalink to this headline">¶</a></h2>
+<p>Plug your screen, keyboard and mouse in the pi and power it up.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default setting for the keyboard is QWERTY.</p>
 </div>
+</div>
+<hr class="docutils" />
 <div class="section" id="vnc">
 <h2>VNC<a class="headerlink" href="#vnc" title="Permalink to this headline">¶</a></h2>
 <p>VNC is a network protocol which allows you to remotely control the desktop screen of your device.</p>
@@ -307,14 +347,23 @@
 </li>
 </ol>
 </div>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Download <a class="reference external" href="https://www.realvnc.com/en/connect/download/viewer/">VNC-viewer</a> on your local machine</p></li>
+<li><p>Add a new connection: <code class="docutils literal notranslate"><span class="pre">File</span></code> → <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">connection</span></code> or <code class="docutils literal notranslate"><span class="pre">CTRL+N</span></code></p></li>
+<li><p>connect</p></li>
+</ol>
 </div>
+</div>
+<hr class="docutils" />
 <div class="section" id="ssh">
 <h2>SSH<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h2>
 <p>SSH stand for secure shell and is a network protocol for a command-line interface to your desired device.</p>
 <div class="section" id="internet">
 <h3>Internet<a class="headerlink" href="#internet" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>WIFI setup: add file <code class="docutils literal notranslate"><span class="pre">wpa_supplicant.conf</span></code> to the boot folder or <code class="docutils literal notranslate"><span class="pre">/etc/wpa_supplicant/wpa_supplicant.conf</span></code> on the pi <span class="xref myst">syntax</span></p></li>
+<li><p>WIFI setup: add file <code class="docutils literal notranslate"><span class="pre">wpa_supplicant.conf</span></code> to the boot folder or <code class="docutils literal notranslate"><span class="pre">/etc/wpa_supplicant/wpa_supplicant.conf</span></code> on the pi <a class="reference internal" href="syntax_wpa_supplicant.html#wpa-supplicant"><span class="std std-ref">syntax</span></a></p></li>
 <li><p>Direct ethernet connection:</p>
 <ol class="simple">
 <li><p>add <code class="docutils literal notranslate"><span class="pre">ip=10.0.0.1</span></code> to the long line of <code class="docutils literal notranslate"><span class="pre">cmdline.txt</span></code> of the boot folder or <code class="docutils literal notranslate"><span class="pre">/boot/cmdline.txt</span></code> on the pi</p></li>
@@ -328,13 +377,12 @@
 </ol>
 </li>
 </ul>
-<p>(preconfigure ssh)=</p>
 </div>
 <div class="section" id="preconfigure">
-<h3>Preconfigure<a class="headerlink" href="#preconfigure" title="Permalink to this headline">¶</a></h3>
+<span id="preconfigure-ssh"></span><h3>Preconfigure<a class="headerlink" href="#preconfigure" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Add file <code class="docutils literal notranslate"><span class="pre">ssh</span></code> to the boot folder (no extension, no contents).</p></li>
-<li><p>WIFI setup: add file <code class="docutils literal notranslate"><span class="pre">wpa_supplicant.conf</span></code> to the boot folder <span class="xref myst">syntax</span></p></li>
+<li><p>WIFI setup: add file <code class="docutils literal notranslate"><span class="pre">wpa_supplicant.conf</span></code> to the boot folder <a class="reference internal" href="syntax_wpa_supplicant.html#wpa-supplicant"><span class="std std-ref">syntax</span></a></p></li>
 </ol>
 </div>
 <div class="section" id="id1">
@@ -350,8 +398,8 @@
 <li><p>Select SSH → Yes</p></li>
 </ol>
 </div>
-<div class="section" id="usage">
-<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>Usage<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>On another computer, type in command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh pi@IP_ADDRESS
 </pre></div>

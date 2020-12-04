@@ -2,6 +2,13 @@
 
 ## Screen, keyboard, mouse
 
+Plug your screen, keyboard and mouse in the pi and power it up.
+
+```{note}
+The default setting for the keyboard is QWERTY.
+```
+
+---
 
 ## VNC
 
@@ -21,12 +28,20 @@ VNC is a network protocol which allows you to remotely control the desktop scree
     - navigate to `Interfacing options`
     - select `vnc` → `Yes`
 
+### Usage
+
+1. Download [VNC-viewer](https://www.realvnc.com/en/connect/download/viewer/) on your local machine 
+2. Add a new connection: `File` → `New connection` or `CTRL+N`
+3. connect
+
+---
+
 ## SSH
 
 SSH stand for secure shell and is a network protocol for a command-line interface to your desired device.
 
 ### Internet
-- WIFI setup: add file `wpa_supplicant.conf` to the boot folder or `/etc/wpa_supplicant/wpa_supplicant.conf` on the pi [syntax]()
+- WIFI setup: add file `wpa_supplicant.conf` to the boot folder or `/etc/wpa_supplicant/wpa_supplicant.conf` on the pi [syntax](wpa_supplicant)
 - Direct ethernet connection:
     1. add `ip=10.0.0.1` to the long line of `cmdline.txt` of the boot folder or `/boot/cmdline.txt` on the pi
     2. Set IP of PC
@@ -37,11 +52,11 @@ SSH stand for secure shell and is a network protocol for a command-line interfac
       4. Configure connection
 	  ![ipv4properties](ipv4properties.png)
 
-(preconfigure ssh)=
+(preconfigure_ssh)=
 ### Preconfigure
 
 1. Add file `ssh` to the boot folder (no extension, no contents).
-2. WIFI setup: add file `wpa_supplicant.conf` to the boot folder [syntax]()
+2. WIFI setup: add file `wpa_supplicant.conf` to the boot folder [syntax](wpa_supplicant)
 
 ### Configure
 

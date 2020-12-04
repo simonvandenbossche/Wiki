@@ -1,3 +1,4 @@
+jb clean . --all
 jb build .
 git add -A
 git commit -m "Publish wiki."
