@@ -1,6 +1,8 @@
 # Metric Autodesk Inventor
 
 ## Order thread unit
+Sources: <https://graitec.co.uk/blog/entry/change-inventor-clearance-hole-and-thread-type>
+
 Set the order and the default thread mesurement unit.
 
 1. Problem

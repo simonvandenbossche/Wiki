@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Setup &#8212; Wiki</title>
+    <title>File organisation &#8212; Wiki</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -54,8 +54,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Python" href="python.html" />
-    <link rel="prev" title="Playground" href="../playground.html" />
+    <link rel="prev" title="Metric Autodesk Inventor" href="../inventor/metric.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -112,34 +111,34 @@
   Raspberry pi
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../raspberrypi/setup.html">
    Setup
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="python.html">
+  <a class="reference internal" href="../raspberrypi/python.html">
    Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="access.html">
+  <a class="reference internal" href="../raspberrypi/access.html">
    Access
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="syntax_wpa_supplicant.html">
+  <a class="reference internal" href="../raspberrypi/syntax_wpa_supplicant.html">
    Syntax wpa_supplicant.conf
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="bash_scripts.html">
+  <a class="reference internal" href="../raspberrypi/bash_scripts.html">
    Bash scripts
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="pinout.html">
+  <a class="reference internal" href="../raspberrypi/pinout.html">
    Pinout
   </a>
  </li>
@@ -173,9 +172,9 @@
   Organisation
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../organisation/file.html">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    File organisation
   </a>
  </li>
@@ -221,7 +220,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/raspberrypi/setup.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/organisation/file.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -259,6 +258,20 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#folder-structure">
+   Folder structure
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -266,38 +279,33 @@
         
               <div>
                 
-  <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
-<ol>
-<li><p>Download the <a class="reference external" href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Image</a><br></p>
+  <div class="section" id="file-organisation">
+<h1>File organisation<a class="headerlink" href="#file-organisation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="folder-structure">
+<h2>Folder structure<a class="headerlink" href="#folder-structure" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Raspbian Buster with desktop and recommended software: Can have a lot of trash.</p></li>
-<li><p>Raspbian Buster with desktop: Allow screen to be used</p></li>
-<li><p>Raspbian Buster Lite: Minimal version with no desktop, recommended.</p></li>
-</ul>
-</li>
-<li><p>Format the SD-card using <a class="reference external" href="https://www.sdcard.org/downloads/formatter/">SD card formatter</a></p></li>
-<li><p>Write the image to the SD-card  using <a class="reference external" href="https://sourceforge.net/projects/win32diskimager/files/latest/download">Win32DiskImager</a></p></li>
-<li><p>Preconfigure <a class="reference internal" href="access.html#preconfigure-ssh"><span class="std std-ref">ssh</span></a> (optional)</p></li>
-<li><blockquote>
-<div><p>Login: <code class="docutils literal notranslate"><span class="pre">pi</span></code>
-password: <code class="docutils literal notranslate"><span class="pre">raspberry</span></code></p>
-</div></blockquote>
+<li><p>Project folder</p>
 <ul>
-<li><p>To set a new password use</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>passwd
-</pre></div>
-</div>
+<li><p><code class="docutils literal notranslate"><span class="pre">3DModeling</span></code></p>
+<ul>
+<li><p>3D modeling files</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Administration</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Pictures</span></code></p></li>
+<li><p>more administrative files</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Programming</span></code></p>
+<ul>
+<li><p>programming files</p></li>
+</ul>
 </li>
 </ul>
 </li>
-<li><p>Update and upgrade (this may take a while)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update
-sudo apt full-upgrade
-</pre></div>
+</ul>
 </div>
-</li>
-</ol>
 </div>
 
     <script type="text/x-thebe-config">
@@ -313,7 +321,7 @@ sudo apt full-upgrade
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content\raspberrypi"
+            path: "./content\organisation"
         },
         predefinedOutput: true
     }
@@ -328,8 +336,7 @@ sudo apt full-upgrade
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../playground.html" title="previous page">Playground</a>
-    <a class='right-next' id="next-link" href="python.html" title="next page">Python</a>
+    <a class='left-prev' id="prev-link" href="../inventor/metric.html" title="previous page">Metric Autodesk Inventor</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
