@@ -19,3 +19,7 @@
 - part: Inventor
   chapters:
     - file: content/inventor/metric
+
+- part: Organisation
+  chapters:
+    - file: content/organisation/file
