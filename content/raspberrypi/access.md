@@ -50,7 +50,7 @@ SSH stand for secure shell and is a network protocol for a command-line interfac
       2. Right-click `Ethernet` and select `Properties`
       3. Double-click `Internet Protocol versie 4 (TCP/IPv4)`
       4. Configure connection
-	  ![ipv4properties](ipv4properties.png)
+	  ![ipv4properties](images/ipv4properties.png)
 
 (preconfigure_ssh)=
 ### Preconfigure
