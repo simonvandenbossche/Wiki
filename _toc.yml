@@ -1,25 +1,32 @@
-- file: content/intro
-- part: General
-  chapters:
-    - file: content/playground
+format: jb-book
+root: content/intro
 
-- part: Raspberry pi
+parts:
+- caption: General
   chapters:
-    - file: content/raspberrypi/setup
-    - file: content/raspberrypi/python
-    - file: content/raspberrypi/access
-    - file: content/raspberrypi/syntax_wpa_supplicant
-    - file: content/raspberrypi/bash_scripts
-    - file: content/raspberrypi/pinout
+  - file: content/playground
 
-- part: PyCharm
+- caption: Raspberry pi
   chapters:
-    - file: content/pycharm/pycharm
+  - file: content/raspberrypi/setup
+  - file: content/raspberrypi/python
+  - file: content/raspberrypi/access
+  - file: content/raspberrypi/syntax_wpa_supplicant
+  - file: content/raspberrypi/bash_scripts
+  - file: content/raspberrypi/pinout
 
-- part: Inventor
+- caption: PyCharm
   chapters:
-    - file: content/inventor/metric
+  - file: content/pycharm/pycharm
 
-- part: Organisation
+- caption: Inventor
   chapters:
-    - file: content/organisation/file
+  - file: content/inventor/metric
+
+- caption: Organisation
+  chapters:
+  - file: content/organisation/file
+    
+- caption: git
+  chapters:
+  - file: content/git/git
