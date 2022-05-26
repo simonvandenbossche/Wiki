@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Setup &#8212; Wiki</title>
+    <title>A guide for git &#8212; Wiki</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Python" href="python.html" />
-    <link rel="prev" title="Playground" href="../playground.html" />
+    <link rel="prev" title="File organisation" href="../organisation/file.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -115,34 +114,34 @@ const thebe_selector_output = ".output, .cell_output"
   Raspberry pi
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../raspberrypi/setup.html">
    Setup
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="python.html">
+  <a class="reference internal" href="../raspberrypi/python.html">
    Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="access.html">
+  <a class="reference internal" href="../raspberrypi/access.html">
    Access
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="syntax_wpa_supplicant.html">
+  <a class="reference internal" href="../raspberrypi/syntax_wpa_supplicant.html">
    Syntax wpa_supplicant.conf
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="bash_scripts.html">
+  <a class="reference internal" href="../raspberrypi/bash_scripts.html">
    Bash scripts
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="pinout.html">
+  <a class="reference internal" href="../raspberrypi/pinout.html">
    Pinout
   </a>
  </li>
@@ -188,9 +187,9 @@ const thebe_selector_output = ".output, .cell_output"
   git
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../git/git.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    A guide for git
   </a>
  </li>
@@ -235,7 +234,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/raspberrypi/setup.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/git/git.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -273,6 +272,44 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#help">
+   Help
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#commit">
+   Commit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#remote-repository">
+   Remote repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#branching">
+   Branching
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fixing-mistakes">
+   Fixing mistakes
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -280,49 +317,187 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Setup</h1>
+                <h1>A guide for git</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#help">
+   Help
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#commit">
+   Commit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#remote-repository">
+   Remote repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#branching">
+   Branching
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fixing-mistakes">
+   Fixing mistakes
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
-<ol>
-<li><p>Download the <a class="reference external" href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Image</a><br></p>
-<ul class="simple">
-<li><p>Raspbian Buster with desktop and recommended software: Can have a lot of trash.</p></li>
-<li><p>Raspbian Buster with desktop: Allow screen to be used</p></li>
-<li><p>Raspbian Buster Lite: Minimal version with no desktop, recommended.</p></li>
-</ul>
-</li>
-<li><p>Format the SD-card using <a class="reference external" href="https://www.sdcard.org/downloads/formatter/">SD card formatter</a></p></li>
-<li><p>Write the image to the SD-card  using <a class="reference external" href="https://sourceforge.net/projects/win32diskimager/files/latest/download">Win32DiskImager</a></p></li>
-<li><p>Preconfigure <a class="reference internal" href="access.html#preconfigure-ssh"><span class="std std-ref">ssh</span></a> (optional)</p></li>
-<li><blockquote>
-<div><p>Login: <code class="docutils literal notranslate"><span class="pre">pi</span></code>
-password: <code class="docutils literal notranslate"><span class="pre">raspberry</span></code></p>
-</div></blockquote>
+  <div class="tex2jax_ignore mathjax_ignore section" id="a-guide-for-git">
+<h1>A guide for git<a class="headerlink" href="#a-guide-for-git" title="Permalink to this headline">¶</a></h1>
+<p>Sources: <a class="reference external" href="https://youtu.be/HVsySz-h9r4">https://youtu.be/HVsySz-h9r4</a></p>
+<div class="section" id="help">
+<h2>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<pre><code lang="bash">git help <i>VERB</i>
+git <i>VERB</i> -- help</code></pre>
+<p>examples:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git <span class="nb">help</span> config
+git config --help
+</pre></div>
+</div>
+</div>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>To set a new password use</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>passwd
+<li><p>check version</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git --version
 </pre></div>
 </div>
+</li>
+<li><p>setup name and email</p>
+<pre><code lang="bash">git config --global user.name "<i>NAME</i>"
+git config --global user.email "<i>EMAIL</i>"</code></pre>
+</li>
+<li><p>check config</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git global --list
+</pre></div>
+</div>
+</li>
+<li><p>initialize git repository from existing local project</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git init
+</pre></div>
+</div>
+</li>
+<li><p>initialize git repository from remote project</p>
+<pre><code lang="bash">git clone <i>URL</i> <i>TARGET_DIRECTORY</i></code></pre>
+</li>
+<li><p>remove <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder ⇒ remove git from the project</p></li>
+<li><p>to exclude files from version control, use the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file</p>
+<pre><code lang="bash">.idea <i>(FOLDER)</i>
+__init__.py <i>(file)</i>
+*.py <i>(file with wildcard)</i></code></pre>
 </li>
 </ul>
-</li>
-<li><p>Update and upgrade (this may take a while)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update
-sudo apt full-upgrade
-</pre></div>
 </div>
+<div class="section" id="commit">
+<h2>Commit<a class="headerlink" href="#commit" title="Permalink to this headline">¶</a></h2>
+<p><img alt="staging_area" src="../../_images/stagingarea.png" /></p>
+<ul>
+<li><p>Check status of all changed files</p>
+<pre><code lang="bash">git status</code></pre>
 </li>
+<li><p>Check changes in more detail</p>
+<pre><code lang="bash">git diff</code></pre>
+</li>
+<li><p>Add file to the staging area</p>
+<pre><code lang="bash">git add <i>FILENAME</i></code></pre>
+</li>
+<li><p>Add all changed files to the staging area</p>
+<pre><code lang="bash">git add -A</code></pre>
+</li>
+<li><p>Commit (for good documentation, add a very detailed message)</p>
+<pre><code lang="bash">git commit -m "<i>MESSAGE</i>"</code></pre>
+</li>
+</ul>
+</div>
+<div class="section" id="remote-repository">
+<h2>Remote repository<a class="headerlink" href="#remote-repository" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Get repository information</p>
+<pre><code lang="bash">git remote -v</code></pre>
+</li>
+<li><p>List branches (locally/remotely)</p>
+<pre><code lang="bash">git branch -a</code></pre>
+</li>
+<li><p>Get code from remote repository</p>
+<pre><code lang="bash">git pull origin BRANCH</code></pre>
+</li>
+<li><p>Upload code to remote repository (1st pull because the code could be changed, use -u to associate the local branch with
+the remote branch)</p>
+<pre><code lang="bash">git pull origin BRANCH
+git push -u origin BRANCH</code></pre>
+</li>
+</ul>
+</div>
+<div class="section" id="branching">
+<h2>Branching<a class="headerlink" href="#branching" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Create new branch</p>
+<pre><code lang="bash">git branch <i>BRANCH_NAME</i></code></pre>
+</li>
+<li><p>Go to branch</p>
+<pre><code lang="bash">git checkout <i>BRANCH_NAME</i></code></pre>
+</li>
+<li><p>Create new branch and go to it</p>
+<pre><code lang="bash">git checkout -b <i>BRANCH_NAME</i></code></pre>
+</li>
+<li><p>List local branches <em>(starred branch is the current branch)</em></p>
+<pre><code lang="bash">git branch</code></pre>
+</li>
+<li><p>List merged local branches</p>
+<pre><code lang="bash">git branch --merged</code></pre>
+</li>
+<li><p>Merge branch into current branch</p>
+<pre><code lang="bash">git merge --no-ff <i>BRANCH_NAME</i></code></pre>
+</li>
+<li><p>Delete branch locally</p>
+<pre><code lang="bash">git branch -d <i>BRANCH_NAME</i></code></pre>
+</li>
+<li><p>Delete branch remotely</p>
+<pre><code lang="bash">git push origin --delete <i>BRANCH_NAME</i></code></pre>
+</li>
+</ul>
+</div>
+<div class="section" id="fixing-mistakes">
+<h2>Fixing mistakes<a class="headerlink" href="#fixing-mistakes" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Return to state of the last commit</p>
+<pre><code lang="bash">git checkout <i>CURRENT_BRANCH_NAME</i></code></pre>
+</li>
+<li><p>Fix bad commit message</p>
+<pre><code lang="bash">git commit --amend -m "<i>GOOD MESSAGE</i>"</code></pre>
+</li>
+<li><p>Add extra file to former commit</p>
+<ol>
+<li><p>add file to the staging area</p></li>
+<li><pre><code lang="bash">git commit --amend</code></pre></li>
 </ol>
+</li>
+</ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -338,7 +513,7 @@ sudo apt full-upgrade
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content\raspberrypi"
+            path: "./content\git"
         },
         predefinedOutput: true
     }
@@ -350,19 +525,12 @@ sudo apt full-upgrade
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../playground.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../organisation/file.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Playground</p>
+            <p class="prev-next-title">File organisation</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="python.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Python</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

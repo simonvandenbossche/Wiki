@@ -2,4 +2,4 @@
 
 * Raspberry pi 3B
 
-![pinout3b](pinout.png)
+![pinout3b](images/pinout.png)

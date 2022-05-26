@@ -6,7 +6,7 @@ Sources: <https://graitec.co.uk/blog/entry/change-inventor-clearance-hole-and-th
 Set the order and the default thread mesurement unit.
 
 1. Problem
-    ![problem](ClearanceHoleProblem.png)
+    ![problem](images/ClearanceHoleProblem.png)
     Fix order of unit of the thread. (I set "ISO" as my new default.)   
 2. Navigate to the data file
     Open "C:\Users\Public\Documents\Autodesk\Inventor 2019\Design Data\XLS\en-US\clearance.xls"
