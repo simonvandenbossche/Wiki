@@ -23,7 +23,3 @@
 - part: Organisation
   chapters:
     - file: content/organisation/file
-
-- part: git
-  chapters:
-    - file: content/git/git
