@@ -4,9 +4,9 @@ Sources: <https://youtu.be/HVsySz-h9r4>
 
 ## Help
 
-<pre><code lang="bash">git help <i>VERB</i>
-git <i>VERB</i> -- help</code></pre>
-
+<div class="highlight-bash notranslate"><div class="highlight"><pre>git help <i>VERB</i>
+git <i>VERB</i> -- help</pre></div>
+</div>
 examples:
     
 ```bash
@@ -27,7 +27,7 @@ git config --help
 
 * check config
   ```bash
-  git global --list
+  git config --global --list
   ```
 * initialize git repository from existing local project
   ```bash
