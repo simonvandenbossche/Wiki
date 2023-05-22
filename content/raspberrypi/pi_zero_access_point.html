@@ -360,7 +360,7 @@ document.write(`
                   
   <section id="access-point">
 <h1>Access point<a class="headerlink" href="#access-point" title="Permalink to this heading">#</a></h1>
-<p>Setup a pi zero as an access point to have a wireless network to which you can connect.</p>
+<p>Set up a pi zero as an access point to have a wireless network to which you can connect.</p>
 <section id="configure">
 <h2>Configure<a class="headerlink" href="#configure" title="Permalink to this heading">#</a></h2>
 <ol class="arabic">
@@ -380,8 +380,8 @@ Get the MAC address of the wlan0 interface with</p>
 </pre></div>
 </div>
 <p>Create the file <code class="docutils literal notranslate"><span class="pre">/etc/udev/rules.d/70-persistent-net.rules</span></code>.
-And add the following line to it. Replace $MAC_ADDRESS with the MAC address of the wlan0 interface.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;ieee80211&quot;</span><span class="p">,</span> <span class="n">ACTION</span><span class="o">==</span><span class="s2">&quot;add|change&quot;</span><span class="p">,</span> <span class="n">ATTR</span><span class="p">{</span><span class="n">macaddress</span><span class="p">}</span><span class="o">==</span><span class="s2">&quot;$MAC_ADDRESS&quot;</span><span class="p">,</span> <span class="n">KERNEL</span><span class="o">==</span><span class="s2">&quot;phy0&quot;</span><span class="p">,</span>   <span class="n">RUN</span><span class="o">+=</span><span class="s2">&quot;/sbin/iw phy phy0 interface add ap0 type __ap&quot;</span><span class="p">,</span>   <span class="n">RUN</span><span class="o">+=</span><span class="s2">&quot;/bin/ip link set ap0 address $MAC_ADDRESS&quot;</span>
+And add the following line to it. Replace $mac_address (twice) with the MAC address of the wlan0 interface.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;ieee80211&quot;</span><span class="p">,</span> <span class="n">ACTION</span><span class="o">==</span><span class="s2">&quot;add|change&quot;</span><span class="p">,</span> <span class="n">ATTR</span><span class="p">{</span><span class="n">macaddress</span><span class="p">}</span><span class="o">==</span><span class="s2">&quot;$mac_address&quot;</span><span class="p">,</span> <span class="n">KERNEL</span><span class="o">==</span><span class="s2">&quot;phy0&quot;</span><span class="p">,</span>   <span class="n">RUN</span><span class="o">+=</span><span class="s2">&quot;/sbin/iw phy phy0 interface add ap0 type __ap&quot;</span><span class="p">,</span>   <span class="n">RUN</span><span class="o">+=</span><span class="s2">&quot;/bin/ip link set ap0 address $mac_address&quot;</span>
 </pre></div>
 </div>
 </li>
@@ -446,7 +446,32 @@ Edit the file <code class="docutils literal notranslate"><span class="pre">/etc/
 </div>
 <p>The line of the static ip should be on the same subnet as the dhcp range in the dnsmasq config.</p>
 </li>
-<li></li>
+<li><p>Configure bridge of the internet <br />
+Create the file <code class="docutils literal notranslate"><span class="pre">/bin/rpi-wifi.sh</span></code> and add the following lines to it.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sleep<span class="w"> </span><span class="m">30</span>
+sudo<span class="w"> </span>ifdown<span class="w"> </span>--force<span class="w"> </span>wlan0
+sudo<span class="w"> </span>ifdown<span class="w"> </span>--force<span class="w"> </span>ap0
+sudo<span class="w"> </span>ifup<span class="w"> </span>ap0
+sudo<span class="w"> </span>ifup<span class="w"> </span>wlan0
+sudo<span class="w"> </span>sysctl<span class="w"> </span>-w<span class="w"> </span>net.ipv4.ip_forward<span class="o">=</span><span class="m">1</span>
+sudo<span class="w"> </span>iptables<span class="w"> </span>-t<span class="w"> </span>nat<span class="w"> </span>-A<span class="w"> </span>POSTROUTING<span class="w"> </span>-s<span class="w"> </span><span class="m">192</span>.168.200.0/24<span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="m">192</span>.168.200.0/24<span class="w"> </span>-j<span class="w"> </span>MASQUERADE
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>dnsmasq
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;AP bridge configured&quot;</span>
+</pre></div>
+</div>
+<p>Make the file executable with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/bin/rpi-wifi.sh
+</pre></div>
+</div>
+<p>Finally, edit crontab with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>crontab<span class="w"> </span>-e
+</pre></div>
+</div>
+<p>And add</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@reboot</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">rpi</span><span class="o">-</span><span class="n">wifi</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</li>
 </ol>
 </section>
 </section>
